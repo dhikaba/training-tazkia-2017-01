@@ -60,6 +60,8 @@ Catatan :
 
 ## Membuat SSH Keypair ##
 
+Kita gunakan protokol SSH supaya tidak perlu memasukkan username/password setiap kali push. Untuk itu, kita harus punya SSH keypair dan mendaftarkan public keynya ke Github. Berikut prosedurnya:
+
 1. Jalankan perintah `ssh-keygen` di dalam console Git Bash. Ikuti saja defaultnya.
 
 2. Buka folder `C:\Users\Nama User\.ssh`, kemudian buka file id_rsa.pub dengan text editor. Select All, kemudian copy.
