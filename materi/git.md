@@ -50,6 +50,14 @@ Catatan :
 		git push <nama remote> <branch yang akan dipush>
 		git push github master
 
+6. Supaya tidak perlu menyebutkan `github` dan `master` setiap kali push, gunakan opsi `-u`
+
+		git push -u github master
+
+	Push selanjutnya bisa langsung saja
+
+		git push
+
 ## Membuat SSH Keypair ##
 
 1. Jalankan perintah `ssh-keygen` di dalam console Git Bash. Ikuti saja defaultnya.
