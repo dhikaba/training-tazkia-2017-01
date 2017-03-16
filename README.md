@@ -2,7 +2,7 @@
 
 Materi Training
 
-* Version Control dengan Git
+* [Version Control dengan Git](materi/git.md)
 * Membuat aplikasi Java dengan Spring Boot
 * Deploy aplikasi Java ke Heroku
 * Membuat aplikasi Android
