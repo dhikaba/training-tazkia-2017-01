@@ -76,3 +76,22 @@ Kita gunakan protokol SSH supaya tidak perlu memasukkan username/password setiap
 	![New SSH Key](img/paste-public-key.png)
 
 5. Klik Add SSH Key
+
+## Mengambil Repository Orang Lain ##
+
+Adakalanya kita tidak memulai project dari awal, tapi mengikuti project yang sudah berjalan. Repositorynya sudah ada dan kita ingin mengunduhnya ke folder lokal. Berikut prosedurnya
+
+1. Pastikan kita tidak berada di folder repository lain. Cek dengan perintah `pwd`.
+
+		pwd
+		C:\Users\endy
+
+2. Dapatkan URL repository yang ingin kita ambil
+
+3. Clone repository ke local
+
+		git clone git@github.com:endymuhardin/training-tazkia-2017-01.git
+
+4. Secara berkala, periksa dan ambil perubahan yang terjadi di remote repository
+
+		git pull
