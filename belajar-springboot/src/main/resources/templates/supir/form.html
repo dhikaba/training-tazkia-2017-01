@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit Data Supir</title>
+</head>
+<body>
+    <div layout:fragment="content">
+    <h1>Edit Supir</h1>
+
+    <form action="form" method="post">
+        <table>
+            <tr>
+                <td>Nama Supir</td>
+                <td>
+                    <input type="text" name="nama" />
+                </td>
+                <td>
+                    Pesan error nanti di sini
+                </td>
+            </tr>
+
+            <tr>
+                <td>No Handphone</td>
+                <td>
+                    <input type="text" name="nomorHandphone" />
+                </td>
+                <td>
+                    Pesan error nanti di sini
+                </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Simpan" />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+
+
+
+        </table>
+    </form>
+    </div>
+</body>
+</html>

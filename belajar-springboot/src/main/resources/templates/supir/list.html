@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
 <head>
     <title>Daftar Supir</title>
 </head>
 <body>
+<div layout:fragment="content">
     <h1>Daftar Supir</h1>
 
+    <a href="form">Tambah Data Supir</a>
+    <hr />
     Waktu saat ini : <span th:text="${sekarang}">ini value template</span>
 
     <br/>
 
     Mencari supir dengan nama <span th:text="${cari}">Nama yang dicari</span>
-
+</div>
 </body>
 </html>
