@@ -3,6 +3,7 @@ package id.ac.tazkia.training.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 
@@ -10,11 +11,12 @@ import java.util.Date;
 public class SupirController {
 
     @RequestMapping("/supir/list")
-    public ModelMap daftarSupir(){
+    public ModelMap daftarSupir(@RequestParam(required = false) String nama){
+
         ModelMap mm = new ModelMap();
-
         mm.addAttribute("sekarang", new Date());
-
+        mm.addAttribute("cari", nama);
         return mm;
+
     }
 }
