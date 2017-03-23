@@ -7,7 +7,7 @@
 <div layout:fragment="content">
 <h1>Edit Jenis Kendaraan</h1>
 
-<form class="form-horizontal" th:action="@{/jeniskendaraan/form}" th:object="${jenisKendaraan}" method="post">
+<form class="form-horizontal" th:object="${jenisKendaraan}" method="post">
     <div class="form-group" th:classappend="${#fields.hasErrors('nama')} ? 'has-error'">
         <label for="nama" class="col-sm-2 control-label">Nama</label>
         <div class="col-sm-10">
