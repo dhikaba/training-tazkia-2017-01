@@ -57,8 +57,8 @@
 
 7. Ganti bagian content dengan placeholder dari Thymeleaf:
 
-		```html
-		<div layout:fragment="content">Di sini content utama</div>
-		```
+    ```html
+    <div layout:fragment="content">Di sini content utama</div>
+    ```
 
 8. Test
