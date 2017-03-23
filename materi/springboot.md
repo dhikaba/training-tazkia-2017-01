@@ -2,6 +2,7 @@
 
 * Starter App
 * Memasang Bootstrap CSS
+* Setup Database
 * Skema Database
 * Menampilkan Data dari Database
 * Menyimpan Data ke Database
@@ -62,3 +63,52 @@
     ```
 
 8. Test
+
+## Persiapan Database ##
+
+### Setup Database MySQL ###
+
+1. Start MySQL
+
+2. Login sebagai root. Bisa juga menggunakan PHPMyAdmin dan masuk ke database `mysql`
+
+		mysql -u root -p
+
+3. Buat user database
+
+		mysql> grant all on belajar.* to belajar@localhost identified by 'java';
+
+4. Buat database
+
+		mysql> create database belajar;
+
+### Konfigurasi Aplikasi ###
+
+1. Tambahkan dependensi di `pom.xml`
+
+	```xml
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+	```
+
+2. Tambahkan konfigurasi nama database, username, dan passwordnya di `application.properties`
+
+		spring.datasource.url=jdbc:mysql://localhost/belajar
+		spring.datasource.username=belajar
+		spring.datasource.password=java
+
+3. Sementara, gunakan autogenerate skema database. Nantinya akan diganti dengan database migration tool
+
+		spring.jpa.hibernate.ddl-auto=update
+
+4. Tambahkan konfigurasi supaya SQL tampil di log agar mudah didebug
+
+		spring.jpa.show-sql=true
+		spring.jpa.properties.hibernate.format_sql=true
